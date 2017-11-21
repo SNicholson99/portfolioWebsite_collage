@@ -1,0 +1,59 @@
+/* === APPLY TO MULTIPLE === */
+
+html, body {
+  overflow:hidden;
+}
+body {
+  background-color: #777;
+}
+
+/* === PROJECTS SLIDESHOW STYLING === */
+/* Image default grayscale */
+img {
+  -webkit-filter: grayscale(100%); /* Safari 6.0 - 9.0 */
+  filter: grayscale(100%);
+}
+
+/* Image hover removes grayscale */
+img:hover {
+  -webkit-filter: grayscale(0%); /* Safari 6.0 - 9.0 */
+  filter: grayscale(0%);
+}
+
+/* === SLIDESHOW STYLING === */
+/* Borders show within box || removes default window padding */
+* {
+  box-sizing: border-box;
+  margin: 0;
+}
+
+/* Set div to empty */
+.slides {display:none}
+
+/* slides container */
+.slides-container {
+  max-width: 1000px;
+  position: relative;
+}
+
+.active {
+  background-color: #717171;
+}
+
+/* Fading animation */
+.fade {
+  -webkit-animation-name: fade;
+  -webkit-animation-duration: 1.5s;
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+
+@-webkit-keyframes fade {
+  from {opacity: .4}
+  to {opacity: 1}
+}
+
+@keyframes fade {
+  from {opacity: .4}
+  to {opacity: 1}
+}
